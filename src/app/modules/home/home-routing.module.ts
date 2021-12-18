@@ -6,9 +6,17 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 const routes: Routes = [
 
   {
-    path: '', //** :username  Con esto recibimos parámetros */
-    component: HomePageComponent
-  }
+    path: 'tracks',
+    loadChildren: () => import('@modules/tracks/tracks.module').then(m => m.TracksModule)
+  },
+  {
+    path: 'favorites',
+    loadChildren: () => import('@modules/favorite/favorite.module').then(m => m.FavoriteModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('@modules/history/history.module').then(m => m.HistoryModule)
+  },
 
 ];
 
