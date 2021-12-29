@@ -2,6 +2,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    /*
+       Es necesario añadir 'resolveJsonModule' para tener acceso a los json de
+       nuestra carpeta de data
+    */
     "resolveJsonModule": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
